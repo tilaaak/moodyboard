@@ -1,8 +1,56 @@
 <html>
+
 <head>
-	<title>Test Page</title>
+	<link rel="stylesheet" href="css/canvas.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Navbar -->
+	<div class="topnav" id="myTopnav">
+		<a class="active" href="/"><i class="fa fa-bars"></i><p>Project Name</p></a>
+	</div>
+
 </head>
 <body>
-Begin here (or replace this with any static code already written).
+
+<!-- sliders -->
+
+	<div class="slidecontainer">
+	  <input type="range" min="1" max="100" value="50" class="slider" id="size">
+	</div>
+
+	<div class="slidecontainer">
+	  <input type="range" min="1" max="100" value="50" class="slider" id="opacity">
+	</div>
+	<!-- chatbox -->
+
+	<div class="chat-popup" id="myForm">
+	  <form action="/action_page.php" class="form-container">
+
+	    <label for="msg"><b>Message</b></label>
+	    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+	    <button type="submit" class="btn">Send</button>
+	    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+	  </form>
+	</div>
+
+	<div class="icon-bar">
+	  <a class="active" href="#"><i class="fa fa-pencil"></i></a>
+	  <a href="#"><i class="fa fa-eraser"></i></a>
+	  <a href="#"><i class="fa fa-text-height"></i></a>
+	  <a href="#"><i class="fa fa-square-o"></i></a>
+	</div>
+
+	<div class="progress" id="help">
+		<a href="#"><i class="fa fa-arrow-left"></i></a>
+		<a href="#"><i class="fa fa-arrow-right"></i></a>
+	</div>
+
+	<div class="active-users">
+	  <a href="#"><i class="fa fa-circle"></i></a>
+	  <a href="#"><i class="fa fa-circle"></i></a>
+	  <a href="#"><i class="fa fa-circle"></i></a>
+
 </body>
+
 </html>

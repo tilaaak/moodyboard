@@ -1,0 +1,221 @@
+  .topnav {
+  background-color: gray;
+  font-size: 50px;
+  }
+
+  .topnav p {
+  	text-align: center;
+  	color: white;
+    font-size: 30px;
+  }
+
+  .topnav a {
+    color: black;
+  }
+
+  {box-sizing: border-box;}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: gray;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid black;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: lightgray;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: gray;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a background color to the cancel button */
+.form-container .cancel {
+  background-color: gray;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
+.chat-popup {
+	position: absolute;
+	bottom: 3%;
+	right: 0;
+}
+
+/*toolbar*/
+
+.icon-bar {
+  width: 90px;
+  background-color: gray;
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 36px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: darkgray;
+}
+
+/*redo undo*/
+
+.progress {
+  width: 10%; /* Full-width */
+  background-color: transparent;
+  overflow: auto; /* Overflow due to float */
+  position: fixed;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.progress a {
+  float: left; /* Float links side by side */
+  text-align: center; /* Center-align text */
+  width: 50%; /* Equal width (5 icons with 20% width each = 100%) */
+  padding: 12px 0; /* Some top and bottom padding */
+  transition: all 0.3s ease;
+  color: black; /* White text color */
+  font-size: 24px; /* Increased font size */
+}
+
+.progress a:hover {
+  background-color: lightgray; /* Add a hover color */
+}
+
+/*slider css*/
+
+.slidecontainer {
+  width: 100%;  /*Width of the outside container */
+}
+
+#size {
+  bottom: 0;
+  left: 0;
+}
+
+#opacity {
+  bottom: 0;
+  right: 0;
+}
+
+/*.opacity {
+  width: 100%;
+  bottom: 0;
+}
+*/
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  position: fixed;
+  width: 40%; /* Full-width */
+  border-radius: 5px;
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  border-radius: 50%;
+  background: black;
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  border-radius: 50%;
+  background: black;
+  cursor: pointer; /* Cursor on hover */
+}
+
+/*active users*/
+.active-users {
+  width: 20%; /* Full-width */
+  background-color: transparent;
+  overflow: auto; /* Overflow due to float */
+  position: absolute;
+  top: 10%;
+  right: 0;
+}
+
+.active-users a {
+  float: left; /* Float links side by side */
+  text-align: center; /* Center-align text */
+  width: 25%; /* Equal width (5 icons with 20% width each = 100%) */
+  padding: 12px 0; /* Some top and bottom padding */
+  transition: all 0.3s ease;
+  color: black; /* White text color */
+  font-size: 50px; /* Increased font size */
+}
