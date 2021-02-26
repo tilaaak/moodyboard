@@ -2,7 +2,7 @@ var data = require('../data.json');
 
 exports.view = function(req, res){
   res.render('index', data);
-  console.log("working?");
+  console.log(data);
 };
 
 exports.login = function(req, res){
