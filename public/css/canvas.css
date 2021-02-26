@@ -1,6 +1,20 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+#profile {
+  position: absolute;
+  top: 15px;
+  right: 0px;
+  height: 50px;
+  width: auto;
+}
+
   .topnav {
-  background-color: gray;
-  font-size: 50px;
+    background-color: #404040;
+    font-size: 50px;
+    margin-bottom: 25px;
+    padding: 10px;
   }
 
   .topnav p {
@@ -10,33 +24,71 @@
   }
 
   .topnav a {
-    color: black;
+    color: white;
   }
 
-  {box-sizing: border-box;}
+  .topnav #more {
+    padding-left: 20px;
+  }
+
+  .topnav input[type=text] {
+    align-content: left;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    margin-left: 60px;
+    font-size: 17px;
+    border-radius: 25px;
+  }
+
+.topnav #proj {
+    font-size: 30px;
+    margin-left:33%;
+  }
+
+.topnav #profile {
+  width: auto;
+  height: 4%;
+  margin: 5px;
+}
+
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
 
 /* Button used to open the chat form - fixed at the bottom of the page */
 .open-button {
-  background-color: gray;
+  border-radius: 25px;
+  background-color: #555;
   color: white;
   padding: 16px 20px;
   border: none;
   cursor: pointer;
   opacity: 0.8;
   position: fixed;
-  bottom: 23px;
+  bottom: 60px;
   right: 28px;
   width: 280px;
 }
 
+#profile {
+  float: right;
+  width: 10%;
+  margin: 10px;
+}
 /* The popup chat - hidden by default */
-.form-popup {
+.chat-popup {
+  border-radius: 25px;
   display: none;
   position: fixed;
-  bottom: 0;
+  bottom: 3%;
   right: 15px;
-  border: 3px solid black;
+  /*border: 3px solid #f1f1f1;*/
   z-index: 9;
+}
+
+.profile-popup {
+  display: none;
 }
 
 /* Add styles to the form container */
@@ -48,24 +100,26 @@
 
 /* Full-width textarea */
 .form-container textarea {
+  border-radius: 25px;
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
   border: none;
   background: #f1f1f1;
   resize: none;
-  min-height: 200px;
+  min-height: 50px;
 }
 
 /* When the textarea gets focus, do something */
 .form-container textarea:focus {
-  background-color: lightgray;
+  background-color: #ddd;
   outline: none;
 }
 
-/* Set a style for the submit/login button */
+/* Set a style for the submit/send button */
 .form-container .btn {
-  background-color: gray;
+  border-radius: 25px;
+  background-color: #4CAF50;
   color: white;
   padding: 16px 20px;
   border: none;
@@ -75,9 +129,10 @@
   opacity: 0.8;
 }
 
-/* Add a background color to the cancel button */
+/* Add a red background color to the cancel button */
 .form-container .cancel {
-  background-color: gray;
+  border-radius: 25px;
+  background-color: red;
 }
 
 /* Add some hover effects to buttons */
@@ -85,17 +140,35 @@
   opacity: 1;
 }
 
-.chat-popup {
-	position: absolute;
-	bottom: 3%;
-	right: 0;
-}
-
 /*toolbar*/
 
 .icon-bar {
+  border-radius: 25px;
   width: 90px;
-  background-color: gray;
+  background-color: #404040;
+  margin-left: 10px;
+}
+
+/*#mydiv {
+  position: absolute;
+  z-index: 9;
+  background-color: #f1f1f1;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+}
+
+#mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  background-color: #2196F3;
+  color: #fff;
+}*/
+
+.icon-bar #add {
+  background: #6495ED;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 
 .icon-bar a {
@@ -108,11 +181,7 @@
 }
 
 .icon-bar a:hover {
-  background-color: #000;
-}
-
-.active {
-  background-color: darkgray;
+  background-color: #87CEEB;
 }
 
 /*redo undo*/
@@ -122,7 +191,7 @@
   background-color: transparent;
   overflow: auto; /* Overflow due to float */
   position: fixed;
-  bottom: 0%;
+  bottom: 0px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -131,7 +200,7 @@
   float: left; /* Float links side by side */
   text-align: center; /* Center-align text */
   width: 50%; /* Equal width (5 icons with 20% width each = 100%) */
-  padding: 12px 0; /* Some top and bottom padding */
+  padding: 5px 0; /* Some top and bottom padding */
   transition: all 0.3s ease;
   color: black; /* White text color */
   font-size: 24px; /* Increased font size */
@@ -145,16 +214,19 @@
 
 .slidecontainer {
   width: 100%;  /*Width of the outside container */
+
 }
 
 #size {
   bottom: 0;
   left: 0;
+  margin: 10px;
 }
 
 #opacity {
   bottom: 0;
   right: 0;
+  margin: 10px;
 }
 
 /*.opacity {
@@ -174,6 +246,8 @@
   opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
   -webkit-transition: .2s; /* 0.2 seconds transition on hover */
   transition: opacity .2s;
+  height: 35px;
+  border-radius: 25px;
 }
 
 /* Mouse-over effects */
@@ -185,8 +259,8 @@
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
+  width: 30px; /* Set a specific slider handle width */
+  height: 30px; /* Slider handle height */
   border-radius: 50%;
   background: black;
   cursor: pointer; /* Cursor on hover */
@@ -206,7 +280,7 @@
   background-color: transparent;
   overflow: auto; /* Overflow due to float */
   position: absolute;
-  top: 10%;
+  top: 6%;
   right: 0;
 }
 
@@ -218,4 +292,67 @@
   transition: all 0.3s ease;
   color: black; /* White text color */
   font-size: 50px; /* Increased font size */
+  margin: 5px;
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+.img-popup {
+  display: none;
+  margin-left: 50%;
+  top: 5%;
+  position: fixed;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+
+.text-sample {
+  display: none;
+  font-size: 50px;
+  text-align: center;
+  position: fixed;
+  flex-wrap: wrap;
 }

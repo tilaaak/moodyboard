@@ -1,17 +1,39 @@
 <html>
 
 <head>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,100italic,300italic,400italic,500italic,500,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/canvas.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<!-- draggable items source in read.MD -->
+	<link href="css/draganddrop.css" rel="stylesheet">
+	<script src="//code.jquery.com/jquery.min.js"></script>
+	<script src="js/draganddrop.js"></script>
+
+
 	<!-- Navbar -->
-	<div class="topnav" id="myTopnav">
-		<a class="active" href="/"><i class="fa fa-bars"></i><p>Project Name</p></a>
+
+	<div class="topnav">
+	  <a id="more" href="/"><i class="fa fa-bars"></i></a>
+	  <a id="proj">Project Name</a>
+	  <input type="text" placeholder="Search.." onclick="openImg()">
+	</div>
+
+
+	<div class="user"><img src="https://www.flaticon.com/svg/vstatic/svg/1077/1077114.svg?token=exp=1614244016~hmac=d40fcee3f7975598bf27a3fbf6ced009" id="profile"></div>
+
+	<div class="profile-popup" id="profile">
+		<form action="/action_page.php" class="form-container">
+
+		  <textarea placeholder="Type message.." name="msg" required></textarea>
+
+		  <button type="submit" class="btn">Send</button>
+		  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+		</form>
 	</div>
 
 </head>
 <body>
-
 <!-- sliders -->
 
 	<div class="slidecontainer">
@@ -23,10 +45,11 @@
 	</div>
 	<!-- chatbox -->
 
+	<button class="open-button" onclick="openForm()">Chat</button>
+
 	<div class="chat-popup" id="myForm">
 	  <form action="/action_page.php" class="form-container">
 
-	    <label for="msg"><b>Message</b></label>
 	    <textarea placeholder="Type message.." name="msg" required></textarea>
 
 	    <button type="submit" class="btn">Send</button>
@@ -34,22 +57,39 @@
 	  </form>
 	</div>
 
+
 	<div class="icon-bar">
-	  <a class="active" href="#"><i class="fa fa-pencil"></i></a>
-	  <a href="#"><i class="fa fa-eraser"></i></a>
-	  <a href="#"><i class="fa fa-text-height"></i></a>
-	  <a href="#"><i class="fa fa-square-o"></i></a>
+	  	<a href="#"><i class="fa fa-pencil"></i></a>
+	  	<a href="#"><i class="fa fa-eraser"></i></a>
+	  	<a href="#" onclick="textTool()"><i class="fa fa-text-height"></i></a>
+	  	<a href="#"><i class="fa fa-square-o"></i></a>
+	  	<a hrerf="#" id="add"><i class="fa fa-plus"></i></a>
 	</div>
+
+	<div class="text-sample" id="text-example">
+		<p> Successfully used text tool.</p>
+	</div>
+
 
 	<div class="progress" id="help">
 		<a href="#"><i class="fa fa-arrow-left"></i></a>
 		<a href="#"><i class="fa fa-arrow-right"></i></a>
 	</div>
 
+	<div class="img-popup" id="img-search">
+	    <img src="https://picsum.photos/200">
+	    <img src="https://picsum.photos/200">
+	</div>
+
 	<div class="active-users">
-	  <a href="#"><i class="fa fa-circle"></i></a>
-	  <a href="#"><i class="fa fa-circle"></i></a>
-	  <a href="#"><i class="fa fa-circle"></i></a>
+	  <a><i class="fa fa-circle"></i></a>
+	  <a><i class="fa fa-circle"></i></a>
+	  <a><i class="fa fa-circle"></i></a>
+	</div>
+
+	
+	<script src="js/canvas.js"></script>
+	<script scc="js/dragonanddrop.js"></script>
 
 </body>
 
