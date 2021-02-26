@@ -4,13 +4,29 @@
 	<title>Moodyboard: Login</title>
 	
 </head>
-<body>
+<body class="fade-in">
 
-<div class="loginPage">
-	<h3>Enter your Login:</h3> 
+<div class="login">
+	<div class="login-top">
+		<img src="/img/moodyboard.png" width="70%" height="14%">
+		<h2 id="second">Please Login Below:</h2>	
+		
+	</div>
+	
+	<div class="rectangle">
+		<form action="/">
+		<div class="inside">
+			<input type="text" name="username" placeholder="Username" required>
+			<input type="password" name="password" placeholder="Password" required>
+			<input type="submit" value="Login">
+		</div>
+	</div>
+	<button class="button"><a href="/" id="back"> <strong>Back to Home</strong> </a></button>
+	</form>
+	
 </div>
-<div>
-	<a href="/"> Back to home </a>
+
+	
 </div>
 </body>
 </html>

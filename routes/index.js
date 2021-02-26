@@ -1,10 +1,8 @@
-
-/*
- * GET home page.
- */
+var data = require('../data.json');
 
 exports.view = function(req, res){
-  res.render('index');
+  res.render('index', data);
+  console.log("working?");
 };
 
 exports.login = function(req, res){

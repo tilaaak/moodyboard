@@ -1,16 +1,24 @@
 <html>
 <head>
+	
 	<link rel="stylesheet" href="/css/index-style.css">
+	
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/bootstrap.js"></script>
+
 	<title>Moodyboard: Home</title>
 	
 </head>
-<body>
+<body class="fade-in">
 
 
 <div class="login">
 	<div class="rectangle">
-		<div class="circle"></div>
-			<a href="/login"> Logout </a>
+		<div class="pfp">
+			<img src="{{imageURL}}" height="40px"  width="40px">
+		</div>	
+		<p>{{name}}<br> <a href="/login"><strong>Logout</strong> </a> </p>
+			
 	</div>
 </div>
 
@@ -24,7 +32,7 @@
 </div>
 
 <div class="jumbotron">
-			<h1>Welcome back, <strong>Remcy</strong></h1>
+			<h1>Welcome back, <strong>{{name}}</strong></h1>
 			<p>Here's your most recent project:</p>
 </div>
 

@@ -3,4 +3,102 @@
 body {
     text-align: center;
     font-family: "Roboto", sans-serif;
+    background: rgb(121,196,212);
+    background: linear-gradient(90deg, rgba(121,196,212,1) 0%, rgba(18,105,121,1) 100%);
+}
+
+login {
+    justify-content: center;
+}
+
+#second {
+    font-weight: 500;
+    color:white;
+}
+
+.login-top{
+    margin-top:25%;
+}
+.rectangle {
+    background-color: #ffffff7d;
+    width: 60%;
+    margin: 5% auto 10% auto;
+    height: 30%;
+    border-radius: 15px 15px;
+    box-shadow: 4px 4px 10px #0000004a;
+    justify-content: center;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.inside {
+    padding-top: 110px;
+    color: white;
+}
+
+
+input,
+.btn {
+  width: 75%;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; 
+  background-color: #008ebb66;
+}
+
+
+input[type=submit] {
+    background-color: #0096C7;
+    color: white;
+    cursor: pointer;
+  }
+
+input:hover,
+.btn:hover {
+  opacity: 1;
+}
+
+.button {
+    background-color: #023E8A; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;  
+    border-radius: 10px 10px;
+    box-shadow: 4px 4px 10px #0000004a;
+   
+}
+
+
+#back {
+    margin-top: 10px;
+}
+
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: .5s;
+}
+
+@keyframes fadeInOpacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
