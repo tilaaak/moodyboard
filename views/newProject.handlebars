@@ -1,16 +1,31 @@
 <html>
 <head>
-	<link rel="stylesheet" href="/css/login-style.css">
+	<link rel="stylesheet" href="/css/newProject.css">
 	<title>Moodyboard: New Project</title>
-	
+	<script src="https://code.jquery.com/jquery.js"></script>
 </head>
-<body>
+<body class="fade-in">
 
-<div class="New Project">
-	<h3>New Project Creation Screen</h3> 
+<div class="login">
+	<div class="login-top">
+		<img src="/img/moodyboard.png" width="70%" height="14%">
+		<h2 id="second">Enter your Project Info Below:</h2>	
+		
+	</div>
+	
+	<div class="rectangle">
+			<form id="addProject" role="form" method="get" action="/add">
+			<div class="form-name">
+			<input type="text" class="form-control" id="name" placeholder="Name" name="name">
+			</div>
+			<div class="form-group">
+			<input type="text" class="form-control" id="description" placeholder="Description" name="description">
+			</div>
+			<input type="submit" id="submitBtn" class="btn btn-default" value="Create Project!"></input>
+		</form>
 </div>
-<div>
-	<a href="/"> Back to home </a>
+
+	
 </div>
 </body>
 </html>

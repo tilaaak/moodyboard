@@ -2,6 +2,9 @@
 <head>
 	<link rel="stylesheet" href="/css/login-style.css">
 	<title>Moodyboard: Login</title>
+	{{> facebook}}
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="js/facebook.js"></script>
 	
 </head>
 <body class="fade-in">
@@ -19,11 +22,14 @@
 			<input type="text" name="username" placeholder="Username" required>
 			<input type="password" name="password" placeholder="Password" required>
 			<input type="submit" value="Login">
+			      <div class="col">
+        	<div class="fb btn">
+			<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+			</fb:login-button>
+			</div>
 		</div>
 	</div>
-	<button class="button"><a href="/" id="back"> <strong>Back to Home</strong> </a></button>
 	</form>
-	
 </div>
 
 	

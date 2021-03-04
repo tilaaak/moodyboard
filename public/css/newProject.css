@@ -23,7 +23,7 @@ login {
     background-color: #ffffff7d;
     width: 60%;
     margin: 5% auto 10% auto;
-    height: 30%;
+    height: 22%;
     border-radius: 15px 15px;
     box-shadow: 4px 4px 10px #0000004a;
     justify-content: center;
@@ -39,6 +39,9 @@ a {
     color: white;
 }
 
+.form-name {
+    padding-top: 50px;
+}
 
 input,
 .btn {

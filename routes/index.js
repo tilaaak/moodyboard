@@ -1,4 +1,6 @@
+const { response } = require('express');
 var data = require('../data.json');
+
 
 exports.view = function(req, res){
   res.render('index', data);
@@ -19,5 +21,4 @@ exports.newProject = function(req, res){
 
 exports.canvas = function(req, res){
   res.render('canvas', data);
-  console.log(data);
 };
