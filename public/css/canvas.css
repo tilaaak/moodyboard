@@ -1,5 +1,36 @@
 * {
   font-family: 'Roboto', sans-serif;
+  /*background: blue;*/
+}
+
+canvas {
+  display: none;
+  /*background-color: black;*/
+  position: fixed;
+  /*z-index:-1;*/
+  margin-left: 100px;
+}
+
+.WIP {
+  position: fixed;
+  margin-left: 200;
+  /*z-index:-1;*/
+}
+
+.WIP p {
+  margin-top: 75px;
+  font-size: 50px;
+}
+
+.WIP li {
+  display: inline;
+  font-size: 20px;
+  /*background: black;*/
+}
+
+.WIP img {
+  height: auto;
+  width: 300px;
 }
 
 #profile {
@@ -10,8 +41,99 @@
   width: auto;
 }
 
+.shape-popup img {
+  height: 100px;
+  width: auto;
+  margin: 200px;
+}
+
+#square {
+  display: none;
+  position: fixed;
+  background: black;
+  margin: 50px;
+
+}
+
+.login{
+    font-size: small;
+    color: white;
+}
+
+.login a {
+  color: white;
+  text-decoration: none;
+}
+
+.rectangle {
+    height: 50px;
+    width: 50px;
+    /*background-color: #00404cc2;*/
+    margin-top: 15px;
+    margin-right: 15px;
+    float: right;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    text-align: left;
+    border-radius: 40px 40px;
+    padding-right: 15px
+}
+
+.pfp {
+    height: 40px;
+    width: 40px;
+    background-color: #ffffff00;
+    border-radius: 50%;
+    margin-right: 10%;
+    margin-left: 5%;
+}
+
+.pfp img {
+  height: 50px;
+  width: auto;
+}
+
+/*search bar*/
+.search {
+  width: 25%;
+  position: absolute;
+  display: flex;
+  right: 0px;
+  top: 35px;
+  margin-right: 90px;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 30px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: gray;
+}
+
+.searchButton {
+  width: 40px;
+  height: 30px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
   .topnav {
-    background-color: #404040;
+    background-color: #00404cc2;
     font-size: 50px;
     margin-bottom: 25px;
     padding: 10px;
@@ -24,8 +146,7 @@
   }
 
   .topnav a {
-    color: white;
-  }
+    color: white;  }
 
   .topnav #more {
     padding-left: 20px;
@@ -43,8 +164,8 @@
   }
 
 .topnav #proj {
-    font-size: 30px;
-    margin-left:33%;
+    font-size: 40px;
+    margin-left:30%;
   }
 
 .topnav #profile {
@@ -53,13 +174,17 @@
   margin: 5px;
 }
 
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
 body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
 /* Button used to open the chat form - fixed at the bottom of the page */
 .open-button {
   border-radius: 25px;
-  background-color: #555;
+  background-color: #00404cc2;
   color: white;
   padding: 16px 20px;
   border: none;
@@ -119,7 +244,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 /* Set a style for the submit/send button */
 .form-container .btn {
   border-radius: 25px;
-  background-color: #4CAF50;
+  background-color: #6495ED;
   color: white;
   padding: 16px 20px;
   border: none;
@@ -132,7 +257,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 /* Add a red background color to the cancel button */
 .form-container .cancel {
   border-radius: 25px;
-  background-color: red;
+  background-color: #00404cc2;
 }
 
 /* Add some hover effects to buttons */
@@ -145,8 +270,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
 .icon-bar {
   border-radius: 25px;
   width: 90px;
-  background-color: #404040;
+  background-color: #00404cc2;
   margin-left: 10px;
+  position: absolute;
 }
 
 /*#mydiv {
@@ -184,6 +310,12 @@ body {font-family: Arial, Helvetica, sans-serif;}
   background-color: #87CEEB;
 }
 
+#pen a:hover {
+  background-color: #87CEEB;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+}
+
 /*redo undo*/
 
 .progress {
@@ -202,12 +334,8 @@ body {font-family: Arial, Helvetica, sans-serif;}
   width: 50%; /* Equal width (5 icons with 20% width each = 100%) */
   padding: 5px 0; /* Some top and bottom padding */
   transition: all 0.3s ease;
-  color: black; /* White text color */
+  color: #004d4d; /* arrow color */
   font-size: 24px; /* Increased font size */
-}
-
-.progress a:hover {
-  background-color: lightgray; /* Add a hover color */
 }
 
 /*slider css*/
@@ -262,7 +390,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   width: 30px; /* Set a specific slider handle width */
   height: 30px; /* Slider handle height */
   border-radius: 50%;
-  background: black;
+  background:#004d4d;
   cursor: pointer; /* Cursor on hover */
 }
 
@@ -280,11 +408,18 @@ body {font-family: Arial, Helvetica, sans-serif;}
   background-color: transparent;
   overflow: auto; /* Overflow due to float */
   position: absolute;
-  top: 6%;
+  top: 8%;
   right: 0;
 }
 
-.active-users a {
+.active-users img {
+  width: 75px;
+  border-radius: 50%;
+  -webkit-filter: drop-shadow(2px 2px 2px #222);
+}
+
+/
+/*.active-users a {
   float: left; /* Float links side by side */
   text-align: center; /* Center-align text */
   width: 25%; /* Equal width (5 icons with 20% width each = 100%) */
@@ -293,7 +428,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
   color: black; /* White text color */
   font-size: 50px; /* Increased font size */
   margin: 5px;
-}
+/*}**/
 
 /* The side navigation menu */
 .sidenav {
@@ -346,6 +481,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
   position: fixed;
   flex-wrap: wrap;
   padding: 0 4px;
+}
+.img-popup img{
+  width: 300px;
+  height: auto;
 }
 
 

@@ -11,16 +11,32 @@
 	<script src="js/draganddrop.js"></script>
 
 
+	<div class="login">
+		<div class="rectangle">
+			<div class="pfp">
+				<img src="{{pfp}}" height="40px"  width="40px">
+			</div>
+			<!-- <p>{{name}}<br> <a href="/login"><strong>Logout</strong> </a> </p> -->
+		</div>
+	</div>
+
+	<div class="search">
+		<input type="text" class="searchTerm" placeholder="Search...">
+		<button type="submit" class="searchButton" onclick="openImg()">
+			<i class="fa fa-search"></i>
+		</button>
+	</div>
+
 	<!-- Navbar -->
 
 	<div class="topnav">
 	  <a id="more" href="/"><i class="fa fa-bars"></i></a>
-	  <a id="proj">Project Name</a>
-	  <input type="text" placeholder="Search.." onclick="openImg()">
+	  <a id="proj">{{projectName}}</a>
+	  <!-- <input type="text" placeholder="Search.." required onclick="openImg()"> -->
+	  </div>
 	</div>
 
 
-	<div class="user"><img src="https://www.flaticon.com/svg/vstatic/svg/1077/1077114.svg?token=exp=1614244016~hmac=d40fcee3f7975598bf27a3fbf6ced009" id="profile"></div>
 
 	<div class="profile-popup" id="profile">
 		<form action="/action_page.php" class="form-container">
@@ -34,6 +50,7 @@
 
 </head>
 <body>
+	<div class="all">
 <!-- sliders -->
 
 	<div class="slidecontainer">
@@ -48,7 +65,7 @@
 	<button class="open-button" onclick="openForm()">Chat</button>
 
 	<div class="chat-popup" id="myForm">
-	  <form action="/action_page.php" class="form-container">
+	  <form class="form-container">
 
 	    <textarea placeholder="Type message.." name="msg" required></textarea>
 
@@ -57,12 +74,17 @@
 	  </form>
 	</div>
 
+	<div class="progress" id="help">
+		<a href="#"><i class="fa fa-arrow-left"></i></a>
+		<a href="#"><i class="fa fa-arrow-right"></i></a>
+	</div>
+
 
 	<div class="icon-bar">
-	  	<a href="#"><i class="fa fa-pencil"></i></a>
+	  	<div id="pen"><a href="#"><i class="fa fa-pencil" onclick="openCanvas()"></i></a></div>
 	  	<a href="#"><i class="fa fa-eraser"></i></a>
 	  	<a href="#" onclick="textTool()"><i class="fa fa-text-height"></i></a>
-	  	<a href="#"><i class="fa fa-square-o"></i></a>
+	  	<a href="#"><i class="fa fa-square-o" id="shapes"></i></a>
 	  	<a hrerf="#" id="add"><i class="fa fa-plus"></i></a>
 	</div>
 
@@ -70,22 +92,35 @@
 		<p> Successfully used text tool.</p>
 	</div>
 
+	<div class="shape-popup" id="square">
+	    <img src="img/shape.png">
+	</div>
 
-	<div class="progress" id="help">
-		<a href="#"><i class="fa fa-arrow-left"></i></a>
-		<a href="#"><i class="fa fa-arrow-right"></i></a>
+	<div class="WIP">
+		<p>Apparel Brainstorming Session</p>
+		<div id="items">
+			<li>v-neck</li><br>
+			<li>crewneck</li><br>
+			<li>polo</li><br>
+			<li>hoodie</li><br>
+		</div>
+		<img src="img/c9.jpg">
+		<img src="img/100t.jpg">
 	</div>
 
 	<div class="img-popup" id="img-search">
-	    <img src="https://picsum.photos/200">
-	    <img src="https://picsum.photos/200">
+	    <img src="img/flyquest.png">
+	    <img src="img/sentinels.png">
 	</div>
 
 	<div class="active-users">
-	  <a><i class="fa fa-circle"></i></a>
-	  <a><i class="fa fa-circle"></i></a>
-	  <a><i class="fa fa-circle"></i></a>
+		<img src="{{pfp}}">
+		<img src="img/bokuto-pfp.jpg">
 	</div>
+
+</div>
+
+	<canvas id="myCanvas"></canvas>
 
 	
 	<script src="js/canvas.js"></script>
