@@ -18,5 +18,6 @@ exports.newProject = function(req, res){
 };
 
 exports.canvas = function(req, res){
-  res.render('canvas');
+  res.render('canvas', data);
+  console.log(data);
 };
