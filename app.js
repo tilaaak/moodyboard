@@ -35,7 +35,8 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', index.view);
+app.get('/', index.login);
+app.get('/home', index.view);
 app.get('/add', add.addProject);
 app.get('/login', index.login);
 app.get('/friends', index.friends);
