@@ -38,7 +38,6 @@ if ('development' == app.get('env')) {
 app.get('/', index.login);
 app.get('/home', index.view);
 app.get('/add', add.addProject);
-app.get('/login', index.login);
 app.get('/friends', index.friends);
 app.get('/newProject', index.newProject);
 app.get('/canvas', index.canvas);
